@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.backends.default"
+
+[project]
+name = "revopoint-converter-6to5"
+version = "1.0.0"
+authors = [
+    {name = "Revopoint-Project-Converter"},
+]
+description = "Tool for converting Revopoint software projects from version 6 to version 5"
+readme = "README.md"
+license = {text = "GPL-3.0-or-later"}
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Operating System :: Microsoft :: Windows",
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: Libraries :: Application Frameworks",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+]
+
+[project.urls]
+Homepage = "https://github.com/1Biba1Boba/Revopoint-Project-Converter-6-to-5"

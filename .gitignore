@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+*.spec/
+build/
+dist/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Temporary files
+*.bak
+*.tmp
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db

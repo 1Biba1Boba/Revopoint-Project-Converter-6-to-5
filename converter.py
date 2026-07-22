@@ -1,3 +1,8 @@
+__version__ = "1.0.0"
+
+APP_NAME = "Revopoint Converter 6to5"
+APP_VERSION = "1.0.0"
+
 import os
 import json
 import shutil
@@ -7,6 +12,8 @@ from tkinter import filedialog, messagebox, ttk
 
 class RevopointConverter:
     """Конвертер проектов Revopoint 6 -> Revopoint 5"""
+
+    VERSION = APP_VERSION
 
     def __init__(self):
         self.project_name = ""
@@ -176,14 +183,14 @@ class ConverterApp:
 
     def __init__(self, root):
         self.root = root
-        self.root.title("Revopoint 6 -> Revopoint 5 Конвертер")
+        self.root.title(f"{APP_NAME} v{APP_VERSION}")
         self.root.geometry("700x450")
         self.converter = RevopointConverter()
 
         # Variables for paths
         self.source_path = tk.StringVar()
         self.output_path = tk.StringVar()
-        self.progress_text = tk.StringVar(value="Готов к конвертации")
+        self.progress_text = tk.StringVar(value=f"Готов к конвертации | Версия: {APP_VERSION}")
 
         self.create_widgets()
         self.center_window()
@@ -204,7 +211,7 @@ class ConverterApp:
         title_frame = tk.Frame(self.root)
         title_frame.pack(fill=tk.X, pady=10)
 
-        title_label = tk.Label(title_frame, text="Revopoint 6 -> Revopoint 5", font=("Arial", 18, "bold"))
+        title_label = tk.Label(title_frame, text=f"{APP_NAME}\nВерсия {APP_VERSION}", font=("Arial", 18, "bold"), fg="#2c3e50")
         title_label.pack()
 
         # Source folder selection
@@ -243,6 +250,10 @@ class ConverterApp:
         # Progress label
         progress_label = tk.Label(self.root, textvariable=self.progress_text, font=("Arial", 10), fg="#333")
         progress_label.pack(pady=5)
+
+        # Version info label at bottom
+        version_label = tk.Label(self.root, text=f"Версия {APP_VERSION} | Revopoint 6 -> Revopoint 5", font=("Arial", 9), fg="#888")
+        version_label.pack(pady=(3, 0))
 
     def browse_source(self):
         """Выбираем исходную папку"""
