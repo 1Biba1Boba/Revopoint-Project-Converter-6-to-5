@@ -1,5 +1,5 @@
 """
-Скрипт для сборки Revopoint Converter 6to5 в standalone exe
+Скрипт для сборки Revopoint Converter 6to5 v1.1.0 в standalone exe
 """
 
 import subprocess
@@ -58,6 +58,6 @@ if __name__ == "__main__":
     
     if success:
         print("\n" + "="*50)
-        print(f"Релиз версия 1.0.0 готов!")
+        print(f"Релиз версия 1.1.0 готова!")
         print(f" Файл: dist/{APP_NAME}.exe")
         print("="*50)
