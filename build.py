@@ -18,13 +18,13 @@ def build_exe():
         print("Устанавливаю pyinstaller...")
         subprocess.run(["pip", "install", "pyinstaller"])
     
-    # Упрощённая команда pyinstaller без version-file
+    # команда pyinstaller с иконкой
     cmd = [
         "pyinstaller",
         "--name", APP_NAME,
         "--onefile",
         "--windowed",
-        "--icon", "None",
+        "--icon", "favicon.ico",
         "converter.py"
     ]
     

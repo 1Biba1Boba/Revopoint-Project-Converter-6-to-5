@@ -6,7 +6,14 @@ import json
 import os
 import requests
 
-GITHUB_TOKEN = "YOUR_TOKEN_HERE"
+# ⚠️ ТОКИН ХРАНИТЬСЯ ПЕРЕМЕННОЙ ОКРУЖЕНИЯ!
+# Установите токин перед запуском:
+# Windows: set GITHUB_TOKEN=ghp_ваш_токен
+# Linux/Mac: export GITHUB_TOKEN=ghp_ваш_токен
+GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
+if not GITHUB_TOKEN:
+    raise EnvironmentError("❌ Переменная окружения GITHUB_TOKEN не установлена!\nУстановите токин: set GITHUB_TOKEN=ghp_ваш_токен")
+
 GITHUB_REPO = "1Biba1Boba/Revopoint-Project-Converter-6-to-5"
 RELEASE_TAG = "v1.1.0"
 RELEASE_NAME = "Revopoint Converter 6to5 v1.1.0"
